@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <style>
+    td{
+        padding: 80px;
+        background-color: bisque ;
+        padding: 30px;
+        width: 150px;
+        padding-bottom: 150px;
+        margin-left: 50px;
+    }
+    </style>
+    <table border="1">
+        
+  <tr>
+    <td id="first" onclick="border(event)"></td>
+    <td id="second" onclick="border(event)"></td>
+    <td id="third" onclick="border(event)"></td>
+  </tr>
+
+  <tr>
+    <td id="fourth" onclick="border(event)"></td>
+    <td id="fifth" onclick="border(event)"></td>
+    <td id="sixth" onclick="border(event)"></td>
+  </tr>
+
+  <tr>
+    <td id="seventh" onclick="border(event)"></td>
+    <td id="eighth" onclick="border(event)"></td>
+    <td id="ninth" onclick="border(event)"></td>
+  </tr>
+</table>
+<div id="winner"></div>
+<script>
+ 
+let change = "x";
+
+const border = (a) => {
+
+    if (a.target.innerText == "") {
+        a.target.innerText = change;
+
+        checkWinner();
+
+        if (change == "x") {
+            change = "o";
+        } else {
+            change = "x";
+        }
+    }
+}
+
+ const checkWinner = () => {
+
+    if (first.innerText == second.innerText &&
+        second.innerText == third.innerText &&
+        first.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (first.innerText == second.innerText &&
+             second.innerText == third.innerText &&
+             first.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+
+    else if (fourth.innerText == fifth.innerText &&
+             fifth.innerText == sixth.innerText &&
+             fourth.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (fourth.innerText == fifth.innerText &&
+             fifth.innerText == sixth.innerText &&
+             fourth.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+
+    else if (seventh.innerText == eighth.innerText &&
+             eighth.innerText == ninth.innerText &&
+             seventh.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (seventh.innerText == eighth.innerText &&
+             eighth.innerText == ninth.innerText &&
+             seventh.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+
+    else if (first.innerText == fourth.innerText &&
+             fourth.innerText == seventh.innerText &&
+             first.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (first.innerText == fourth.innerText &&
+             fourth.innerText == seventh.innerText &&
+             first.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+
+    else if (second.innerText == fifth.innerText &&
+             fifth.innerText == eighth.innerText &&
+             second.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (second.innerText == fifth.innerText &&
+             fifth.innerText == eighth.innerText &&
+             second.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+
+    else if (third.innerText == sixth.innerText &&
+             sixth.innerText == ninth.innerText &&
+             third.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (third.innerText == sixth.innerText &&
+             sixth.innerText == ninth.innerText &&
+             third.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+
+    else if (first.innerText == fifth.innerText &&
+             fifth.innerText == ninth.innerText &&
+             first.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (first.innerText == fifth.innerText &&
+             fifth.innerText == ninth.innerText &&
+             first.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+
+    else if (third.innerText == fifth.innerText &&
+             fifth.innerText == seventh.innerText &&
+             third.innerText == "x") {
+
+        winner.innerText = "x wins";
+    }
+
+    else if (third.innerText == fifth.innerText &&
+             fifth.innerText == seventh.innerText &&
+             third.innerText == "o") {
+
+        winner.innerText = "o wins";
+    }
+}
+
+
+    </script>
+</body>
+</html>
